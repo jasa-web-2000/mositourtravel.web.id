@@ -1,7 +1,7 @@
 <?php
 
-$domain = 'http://192.168.1.5/mositourtravel.web.id/';
-// $domain = 'https://mositourtravel.web.id/';
+// $domain = 'http://192.168.1.5/mositourtravel.web.id/';
+$domain = 'https://mositourtravel.web.id/';
 $brand = 'Mosi Tour & Travel';
 // $logoShared = 'src/img/harga-travel.jpg';
 $logo = 'src/img/logo.webp';
