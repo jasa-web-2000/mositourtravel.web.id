@@ -1,7 +1,7 @@
 <?php
 
-// $domain = 'http://192.168.1.5/mositourtravel.web.id/';
-$domain = 'https://mositourtravel.web.id/';
+$domain = 'http://192.168.1.5/mositourtravel.web.id/';
+// $domain = 'https://mositourtravel.web.id/';
 $brand = 'Mosi Tour & Travel';
 // $logoShared = 'src/img/harga-travel.jpg';
 $logo = 'src/img/logo.webp';
@@ -110,6 +110,30 @@ $galeri = [
 //   '2.jpeg',
 // ];
 
+
+$keunggulan = [
+  [
+    '🚗',
+    'Armada Nyaman & Terawat',
+    'Kami menggunakan armada mobil yang bersih, wangi, dan selalu dalam kondisi prima. Setiap kendaraan menjalani perawatan rutin untuk memastikan perjalanan Anda aman dan nyaman dari penjemputan hingga tiba di tujuan.'
+  ],
+
+  [
+    '👨‍✈️',
+    'Driver Profesional & Berpengalaman',
+    'Pengemudi kami ramah, berpengalaman, dan memahami rute terbaik untuk perjalanan yang lebih cepat dan efisien . Keselamatan dan kenyamanan penumpang adalah prioritas utama kami.'
+  ],
+  [
+    '🏠',
+    'Layanan Door to Door',
+    'Nikmati kemudahan dijemput dan diantar langsung ke alamat tujuan tanpa perlu repot ke terminal. Praktis, hemat waktu, dan lebih nyaman.'
+  ],
+  [
+    '💰',
+    'Harga Terjangkau & Transparan',
+    'Tanpa biaya tersembunyi. Anda mendapatkan layanan premium dengan harga yang kompetitif dan sebanding dengan kenyamanan yang kami berikan.'
+  ],
+];
 ?>
 
 <!DOCTYPE html>
@@ -307,7 +331,7 @@ $galeri = [
         style="background-image: url(./src/img/background-hero-section.jpg)"
         class="py-10 lg:py-7 bg-fixed bg-contain bg-center rounded-lg relative">
         <div
-          class="absolute rounded-lg inset-0 bg-[radial-gradient(rgb(0_0_0_/_0.50),rgb(0_0_0_/_0.66))] from-0% via-50% to-100%">
+          class="absolute rounded-lg inset-0 bg-[radial-gradient(rgb(0_0_0_/_0.6),rgb(0_0_0_/_0.7))] from-0% via-50% to-100%">
         </div>
         <div
           class="grid grid-cols-12 [&>div]:col-span-full items-center gap-y-6">
@@ -630,6 +654,7 @@ $galeri = [
               <ul class="!list-item !list-disc text-slate-300 ml-5">
                 <li>Travel Reguler</li>
                 <li>Carter (Private)</li>
+                <li>Sewa Mobil</li>
                 <li>Kirim Paket</li>
                 <li>Paket Wisata</li>
               </ul>
@@ -658,7 +683,7 @@ $galeri = [
             </h2>
             <p
               class="max-w-lg text-base text-indigo-100 mx-auto mt-4 sm:text-lg">
-              Hubungi kami dan konsultasikan kebutuhan anda, kami siap
+              Hubungi kami dan konsultasikan kebutuhan travel murah anda sekarang juga, kami siap
               membantu anda 24 jam.
             </p>
           </div>
@@ -744,7 +769,7 @@ $galeri = [
     <!-- CTA -->
 
     <!-- Galeri -->
-    <section class="bg-blue-50 my-20 py-20"
+    <section class="bg-blue-50 mt-20 py-20"
       id="galeri">
       <div class="container">
         <div class="">
@@ -777,6 +802,45 @@ $galeri = [
                   alt="galeri <?= $key + 1 ?>" />
               <?php endforeach; ?>
             <?php endif; ?>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Galeri -->
+
+    <!-- Keunggulan -->
+    <section class="bg-gradient-to-tr from-primary to-primary-hover mb-20 py-20"
+      id="Keunggulan">
+      <div class="container">
+        <div class="">
+          <div class="text-center inner-container">
+            <h2 class="line-h2 text-white">Keunggulan Kami</h2>
+            <p class="desc !text-slate-300 !mb-5">
+              Nikmati layanan transportasi yang mengutamakan kenyamanan, keamanan, dan ketepatan waktu. Kami hadir untuk memberikan pengalaman perjalanan yang lebih praktis dan menyenangkan.
+            </p>
+          </div>
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 sm:gap-x-6 gap-y-8 [&>*]:overflow-hidden [&>img]:cursor-pointer [&>img]:w-full [&>img]:object-cover [&>img]:rounded-xl [&>img]:shadow-lg [&>img]:h-72 [&>img]:transition-all [&>img]:duration-700 [&>img]:brightness-50 hover:[&>img]:brightness-90 [&>img]:col-span-full">
+            <?php if (count($keunggulan) > 0) : ?>
+              <?php foreach ($keunggulan as $key => $item) : ?>
+                <div class="rounded-3xl border border-gray-100 group relative bg-slate-100 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
+                  <div class="relative space-y-8 py-12 p-8">
+                    <span class="text-5xl"><?= $item[0] ?></span>
+                    <div class="space-y-2">
+                      <h5 class="text-xl font-semibold transition group-hover:text-secondary">
+                        <?= $item[1] ?>
+                      </h5>
+                      <p class="">
+                        <?= $item[2] ?>
+                      </p>
+                    </div> <a href="<?= $link_whatsapp ?>" class="flex items-center justify-between group-hover:text-secondary"> <span class="text-sm">Hubungi Kami</span> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 -translate-x-4 text-2xl opacity-0 transition duration-300 group-hover:translate-x-0 group-hover:opacity-100">
+                        <path fill-rule="evenodd" d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z" clip-rule="evenodd"></path>
+                      </svg> </a>
+                  </div>
+                </div>
+              <?php endforeach; ?>
+            <?php endif; ?>
+
           </div>
         </div>
       </div>
