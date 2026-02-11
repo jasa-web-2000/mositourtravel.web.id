@@ -1,19 +1,19 @@
 <?php
 
-$domain = 'http://192.168.1.5/mositourtravel.web.id/';
-// $domain = 'https://mositourtravel.web.id/';
-$brand = 'Mosi Tour Travel';
+// $domain = 'http://192.168.1.5/mositourtravel.web.id/';
+$domain = 'https://mositourtravel.web.id/';
+$brand = 'Mosi Tour & Travel';
 // $logoShared = 'src/img/harga-travel.jpg';
-$logo = 'src/img/logo.jpeg';
-$logoPanjang = 'src/img/logo.jpeg';
-$title = $brand . " menawarkan Travel Denpasar Singaraja PP (PP)";
-$desc = $brand . " menawarkan Travel di daerah Denpasar, Singaraja, Bandara Ngurah Rai, Nusa Dua, Kuta, dan Seminyak. ";
-$telp = '0895-6153-22022';
+$logo = 'src/img/logo.webp';
+$logoPanjang = 'src/img/logo.webp';
+$title = $brand . " menawarkan Travel Jawa Bali 24 Jam";
+$desc = $brand . " menawarkan Travel di daerah Surabaya, Bali, Denpasar, Kediri, Mojokerto, dan Jombang.";
+$telp = '0895-4028-82198';
 // $telp2 = '0857-9190-4615';
-$alamat = 'Jl. Tunjung Biru II Selatan No.6, Pemogan, Denpasar Selatan, Kota Denpasar, Bali 80221';
+$alamat = 'Jl. Tribuana Tungga Dewi Jalan, Mojokerep, Menanggal, Kec. Mojosari, Kabupaten Mojokerto, Jawa Timur 61382';
 
 
-$iframe = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3943.8181430606933!2d115.2028302!3d-8.7088131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd24100733f639b%3A0xd7f713eb4a7cef65!2sTravel%20denpasar%20singaraja!5e0!3m2!1sid!2sid!4v1769258113467!5m2!1sid!2sid';
+$iframe = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.5159848406374!2d112.53856177402264!3d-7.518558092494284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e780b48c7c3c505%3A0xc814eb8e1dc815d6!2sJl.%20Tribuana%20Tungga%20Dewi%2C%20Mojokerep%2C%20Menanggal%2C%20Kec.%20Mojosari%2C%20Kabupaten%20Mojokerto%2C%20Jawa%20Timur!5e0!3m2!1sid!2sid!4v1770794146576!5m2!1sid!2sid';
 
 function res_telp($telp)
 {
@@ -119,7 +119,6 @@ $galeri = [
   class="scroll-smooth">
 
 <head>
-
   <!-- Google Tag Manager -->
   <script>
     (function(w, d, s, l, i) {
@@ -135,10 +134,9 @@ $galeri = [
       j.src =
         'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
       f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-WCW528F3');
+    })(window, document, 'script', 'dataLayer', 'GTM-N82MWHS9');
   </script>
   <!-- End Google Tag Manager -->
-
   <meta name="author" content="Dion Zebua" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -173,9 +171,8 @@ $galeri = [
 </head>
 
 <body class="font-poppins text-slate-700 overflow-x-hidden">
-
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCW528F3"
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N82MWHS9"
       height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
