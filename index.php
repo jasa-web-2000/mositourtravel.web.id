@@ -25,10 +25,13 @@ $res_telp = res_telp($telp);
 $res_telp2 = isset($telp2) ? res_telp($telp2) : null;
 $link_telp = 'tel:' . $res_telp;
 $link_telp2 = isset($telp2) ? 'tel:' . $res_telp : null;
-$link_whatsapp = 'https://api.whatsapp.com/send/?phone=' . res_telp($telp) . '&text=Halo+admin+' . $domain . '&type=phone_number&app_absent=0';
-$link_whatsapp2 = isset($telp2) ? 'https://api.whatsapp.com/send/?phone=' . res_telp($telp2) . '&text=Halo+admin+' . $domain . '&type=phone_number&app_absent=0' : null;
+$link_whatsapp = 'https://wa.me/' . res_telp($telp) .
+  '?text=' . urlencode('Halo admin ' . $domain);
 
-
+$link_whatsapp2 = isset($telp2)
+  ? 'https://wa.me/' . res_telp($telp2) .
+  '?text=' . urlencode('Halo admin ' . $domain)
+  : null;
 
 $menu = [
   [
@@ -52,29 +55,25 @@ $menu = [
 
 
 $rute = [
-  "Travel Singaraja Denpasar",
-  "Travel Singaraja Bandara Ngurah Rai",
-  "Travel Singaraja Nusa Dua",
-  "Travel Singaraja Kuta",
-  "Travel Singaraja Seminyak",
+  "Travel Surabaya Bali",
+  "Travel Surabaya Denpasar",
+  "Travel Kediri Denpasar",
+  "Travel Kediri Bali",
+  "Travel Kediri Surabaya",
+  "Travel Mojokerto Denpasar",
+  "Travel Mojokerto Bali",
+  "Travel Jombang Denpasar",
+  "Travel Jombang Bali",
 
-  "Travel Buleleng Denpasar",
-  "Travel Buleleng Bandara Ngurah Rai",
-  "Travel Buleleng Nusa Dua",
-  "Travel Buleleng Kuta",
-  "Travel Buleleng Seminyak",
-
-  "Travel Denpasar Singaraja",
-  "Travel Bandara Ngurah Rai Singaraja",
-  "Travel Nusa Dua Singaraja",
-  "Travel Kuta Singaraja",
-  "Travel Seminyak Singaraja",
-
-  "Travel Denpasar Buleleng",
-  "Travel Bandara Ngurah Rai Buleleng",
-  "Travel Nusa Dua Buleleng",
-  "Travel Kuta Buleleng",
-  "Travel Seminyak Buleleng",
+  "Travel Bali Surabaya",
+  "Travel Denpasar Surabaya",
+  "Travel Denpasar Kediri",
+  "Travel Bali Kediri",
+  "Travel Surabaya Kediri",
+  "Travel Denpasar Mojokerto",
+  "Travel Denpasar Jombang",
+  "Travel Bali Mojokerto",
+  "Travel Bali Jombang",
 ];
 
 $kota = [
@@ -83,16 +82,16 @@ $kota = [
     'denpasar.jpg',
   ],
   [
-    'Singaraja',
-    'singaraja.jpg',
+    'Bali',
+    'bali.jpg',
   ],
   [
-    'Kuta',
-    'kuta.jpg',
+    'Surabaya',
+    'surabaya.jpg',
   ],
   [
-    'Ngurah Rai',
-    'ngurah-rai.jpg',
+    'Kediri',
+    'kediri.jpg',
   ],
 ];
 
@@ -100,9 +99,9 @@ $galeri = [
   '1.jpeg',
   '2.jpeg',
   '3.jpeg',
-  '4.jpeg',
-  '5.jpeg',
-  '6.jpeg',
+  '4.jpg',
+  '5.jpg',
+  '6.jpg',
 ];
 
 // $harga = [
@@ -294,13 +293,13 @@ $galeri = [
 
   <main class="overflow-x-hidden">
 
-    <?php if (isset($logoShared)): ?>
+    <!-- <?php if (isset($logoShared)): ?>
       <div class="container !mb-5 lg:!mb-10">
         <a href="<?= $link_whatsapp ?>" target="_blank" rel="nofollow">
           <img src="<?= $domain . $logoShared ?>" class="mx-auto rounded-lg w-full" alt="Harga Travel">
         </a>
       </div>
-    <?php endif; ?>
+    <?php endif; ?> -->
 
     <!-- Hero Section -->
     <section class="container">
@@ -476,10 +475,53 @@ $galeri = [
         </div>
       </div>
     </section>
-    <!-- Hero Section -->
+
+    <!-- Jadwal -->
     <div class="container mt-10">
-      <img src="<?= $domain ?>src/img/jadwal-travel.jpg" class="rounded-xl shadow-md" alt="Jadwal Travel Denpasar Singaraja">
+      <a href="<?= $link_whatsapp ?>" target="_blank" rel="nofollow">
+
+        <img src="<?= $domain ?>src/img/Mosi-Tour-Travel.webp" class="rounded-xl shadow-md w-full aspect-[16/6]" alt="<?= $title ?>">
+      </a>
     </div>
+
+
+    <!-- Kota Populer -->
+    <section class=" mb-20 bg-blue-50">
+      <div class="container">
+        <div class="py-20">
+          <div class="text-center inner-container">
+            <h2 class="line-h2">Destinasi Populer</h2>
+            <p class="desc">
+              Kunjungi destinasi-destinasi terkenal bersama <?= $brand ?>, nikmati pengalaman
+              travel yang tak terlupakan dan menyenangkan!
+            </p>
+          </div>
+          <div
+            class="grid grid-cols-8 gap-x-6 gap-y-10 [&>*]:col-span-full [&>*]:sm:col-span-4 [&>*]:md:!col-span-2 [&>*]:border [&>*]:relative [&>*]:min-h-96 md:[&>*]:min-h-80 [&>*]:rounded-xl [&>*]:shadow-xl [&>*]:cursor-pointer [&>*]:overflow-hidden [&>*]:before:absolute [&>*]:before:content-[''] [&>*]:before:z-[2] [&>*]:before:inset-0 [&>*]:before:bg-slate-950/55 [&_img]:w-full [&_img]:h-full [&_img]:object-cover [&_img]:absolute [&_img]:inset-0 [&_img]:scale-100 [&_img]:transition-all [&_img]:duration-500 [&>div>div]:z-10 [&>div>div]:relative [&>div>div]:p-5 [&>div>div]:text-center [&>div>div]:flex-col [&>div>div]:flex [&>div>div]:justify-between [&>div>div]:h-full [&_h3]:text-slate-50 [&_a]:col-span-full [&_a]:px-5 [&_a]:py-2 [&_a]:border-2 [&_a]:border-primary hover:[&_a]:border-primary-hover [&_a]:bg-primary hover:[&_a]:bg-primary-hover [&_a]:text-slate-200 [&_a]:rounded-lg [&_a]:transition-all [&_a]:relative">
+            <?php if (count($kota) > 0) : ?>
+              <?php foreach ($kota as $item) : ?>
+                <div class="group">
+                  <img
+                    src="<?= $domain . 'src/img/place/' . $item[1] ?>"
+                    class="group-hover:scale-125"
+                    loading="lazy"
+                    alt="<?= $item[0] ?>" />
+                  <div class="">
+                    <h3><?= $item[0] ?></h3>
+                    <a
+                      href="<?= $link_whatsapp ?>"
+                      target="_blank">
+                      Pesan Sekarang
+                    </a>
+                  </div>
+                </div>
+              <?php endforeach; ?>
+            <?php endif; ?>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Kota Populer -->
 
     <!-- Rute Travel -->
     <!-- <section class="container my-20" id="harga-travel">
@@ -545,7 +587,7 @@ $galeri = [
                   href="<?= $link_whatsapp ?>!"
                   class=""></a>
                 <img
-                  src="<?= $domain ?>src/img/rute-naga-trans.jpg"
+                  src="<?= $domain ?>src/img/rute.webp"
                   width="100%"
                   height="100%"
                   loading="lazy"
@@ -580,7 +622,7 @@ $galeri = [
             <div class="text inner-container">
               <h2 class="line-h2 left-12 text-slate-50 before:!bg-blue-300 after:!bg-blue-300">Tentang Kami</h2>
               <p class="desc !text-slate-300 !mb-5">
-                <?= $desc ?> Kami travel Denpasar, Singaraja, Lovina, Kuta, Seminyak, Bandara, Sanur, Jimbaran, Nusa Dua, dan sekitarnya. Melayani jemput antar ke lokasi (door to door service). Dengan harga yg murah, dan driver yg berpemgalaman.
+                <?= $desc ?> Kami travel Surabaya, Bali, Denpasar, Kediri, Mojokerto, Jombang dan sekitarnya. Melayani jemput antar ke lokasi (door to door service). Dengan harga yg murah, dan driver yg berpemgalaman.
               </p>
               <p class="desc !text-slate-300 !mb-5">
                 Yuk booking sekarang, bayarnya nanti bisa cash setelah sampai di tujuan.
@@ -603,43 +645,7 @@ $galeri = [
     </section>
     <!-- Tentang Kami -->
 
-    <!-- Kota Populer -->
-    <section class=" mb-20 bg-blue-50">
-      <div class="container">
-        <div class="py-20">
-          <div class="text-center inner-container">
-            <h2 class="line-h2">Destinasi Populer</h2>
-            <p class="desc">
-              Kunjungi destinasi-destinasi terkenal bersama <?= $brand ?>, nikmati pengalaman
-              travel yang tak terlupakan dan menyenangkan!
-            </p>
-          </div>
-          <div
-            class="grid grid-cols-8 gap-x-6 gap-y-10 [&>*]:col-span-full [&>*]:sm:col-span-4 [&>*]:md:!col-span-2 [&>*]:border [&>*]:relative [&>*]:min-h-96 md:[&>*]:min-h-80 [&>*]:rounded-xl [&>*]:shadow-xl [&>*]:cursor-pointer [&>*]:overflow-hidden [&>*]:before:absolute [&>*]:before:content-[''] [&>*]:before:z-[2] [&>*]:before:inset-0 [&>*]:before:bg-slate-950/55 [&_img]:w-full [&_img]:h-full [&_img]:object-cover [&_img]:absolute [&_img]:inset-0 [&_img]:scale-100 [&_img]:transition-all [&_img]:duration-500 [&>div>div]:z-10 [&>div>div]:relative [&>div>div]:p-5 [&>div>div]:text-center [&>div>div]:flex-col [&>div>div]:flex [&>div>div]:justify-between [&>div>div]:h-full [&_h3]:text-slate-50 [&_a]:col-span-full [&_a]:px-5 [&_a]:py-2 [&_a]:border-2 [&_a]:border-primary hover:[&_a]:border-primary-hover [&_a]:bg-primary hover:[&_a]:bg-primary-hover [&_a]:text-slate-200 [&_a]:rounded-lg [&_a]:transition-all [&_a]:relative">
-            <?php if (count($kota) > 0) : ?>
-              <?php foreach ($kota as $item) : ?>
-                <div class="group">
-                  <img
-                    src="<?= $domain . 'src/img/place/' . $item[1] ?>"
-                    class="group-hover:scale-125"
-                    loading="lazy"
-                    alt="<?= $item[0] ?>" />
-                  <div class="">
-                    <h3><?= $item[0] ?></h3>
-                    <a
-                      href="<?= $link_whatsapp ?>"
-                      target="_blank">
-                      Pesan Sekarang
-                    </a>
-                  </div>
-                </div>
-              <?php endforeach; ?>
-            <?php endif; ?>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Kota Populer -->
+
 
     <!-- CTA -->
     <section class="container my-20">
@@ -821,7 +827,7 @@ $galeri = [
                       alt="bintang" />
                   </div>
                   <p class="testimoni">
-                    Saya menggunakan jasa Travel <?= $brand ?> untuk rute <a href="https://jasatravel.web.id/rute-travel/dari-denpasar-selatan/ke-buleleng/517101/510806" class="underline" target="_blank">Travel Denpasar Buleleng</a>. Pelayanan sangat memuaskan, armada nyaman, tepat waktu, dan staf ramah. Pengalaman perjalanan yang menyenangkan dan saya sangat puas!
+                    Saya menggunakan jasa Travel <?= $brand ?> untuk rute <a href="https://jasatravel.web.id/rute-travel/dari-bali/ke-kota-surabaya/51/3578" class="underline" target="_blank">Travel Bali Surabaya</a>. Pelayanan sangat memuaskan, armada nyaman, tepat waktu, dan staf ramah. Pengalaman perjalanan yang menyenangkan dan saya sangat puas!
                   </p>
                   <div class="user-testimoni">
                     <img
@@ -1079,7 +1085,7 @@ $galeri = [
 
             </div>
 
-            <a href="https://www.instagram.com/traveldenpasarsingaraja?igsh=MWVlc3NrbnN4bnlpdw==" target="_blank"
+            <!-- <a href="https://www.instagram.com/traveldenpasarsingaraja?igsh=MWVlc3NrbnN4bnlpdw==" target="_blank"
               class="p-5 py-8 col-span-full sm:col-span-4 border-b-2 sm:border-b-0 sm:border-r-2 border-primary flex flex-col justify-start items-center gap-y-5">
 
 
@@ -1093,14 +1099,13 @@ $galeri = [
               <p class="text-primary underline line-clamp-1 break-all">
                 @traveldenpasarsingaraja
               </p>
-            </a>
+            </a> -->
 
-            <div
+            <!-- <div
               class=" col-span-full sm:col-span-4 sm:border-t-0 sm:border-b-0 sm:border-l-2 sm:border-r-2 border-primary flex flex-col justify-start items-center gap-y-5">
-              <!--  -->
-            </div>
+            </div> -->
 
-            <a target="_blank" href="https://www.facebook.com/trvel.singaraja.dps"
+            <!-- <a target="_blank" href="https://www.facebook.com/trvel.singaraja.dps"
               class="p-5 py-8 col-span-full sm:col-span-4 border-t-2 sm:border-t-0 sm:border-l-2 border-primary flex flex-col justify-start items-center gap-y-5">
               <svg
                 aria-hidden="true"
@@ -1114,7 +1119,7 @@ $galeri = [
               <h3>Facebook</h3>
               <p class="text-primary underline line-clamp-1 break-all" target="_blank" href="https://www.facebook.com/trvel.singaraja.dps">@trvel.singaraja.dps</p>
 
-            </a>
+            </a> -->
           </div>
         </div>
         <?php if ($iframe) :  ?>
