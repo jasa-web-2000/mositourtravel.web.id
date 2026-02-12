@@ -26,11 +26,11 @@ $res_telp2 = isset($telp2) ? res_telp($telp2) : null;
 $link_telp = 'tel:' . $res_telp;
 $link_telp2 = isset($telp2) ? 'tel:' . $res_telp : null;
 $link_whatsapp = 'https://wa.me/' . res_telp($telp) .
-  '?text=' . urlencode('Halo admin ' . $domain);
+  '?text=' . urlencode('Halo admin ' . $brand);
 
 $link_whatsapp2 = isset($telp2)
   ? 'https://wa.me/' . res_telp($telp2) .
-  '?text=' . urlencode('Halo admin ' . $domain)
+  '?text=' . urlencode('Halo admin ' . $brand)
   : null;
 
 $menu = [
